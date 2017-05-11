@@ -16,27 +16,36 @@ setInterval(function(){
   var hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   var random = Math.floor((Math.random() * 4) + 1);
   ctx.fillStyle = hue;
-  ctx.fillRect(squareX, squareY, 5, 5);
-  if(random === 1){
+  ctx.fillRect(crazoX, crazoY, 15, 15);
+  if(random === 1 && crazoX <= ctx.canvas.width){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareX+=5;
-    ctx.fillRect(squareX, squareY, 5, 5);
-  } else if(random === 2){
+    crazoX+= 5;
+    if(crazoX === player1X && crazoY === player1Y || crazoX === player2X && crazoY === player2Y){
+      alert("You died!");
+    }
+    ctx.fillRect(crazoX, crazoY, 15, 15);
+  } else if(random === 2 && crazoY <= ctx.canvas.height){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareY+=5;
-    ctx.fillRect(squareX, squareY, 5, 5);
-  } else if(random === 3){
+    crazoY+= 5;
+    ctx.fillRect(crazoX, crazoY, 15, 15);
+        if(crazoX === player1X && crazoY === player1Y || crazoX === player2X && crazoY === player2Y){
+      alert("You died!");
+    }
+  } else if(random === 3 && crazoX >= 0){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
       ctx.fillStyle = hue;
-    squareX-=5;
-    ctx.fillRect(squareX, squareY, 5, 5);
-  } else if(random === 4){
+    crazoX-= 5;
+    ctx.fillRect(crazoX, crazoY, 15, 15);
+        if(crazoX === player1X && crazoY === player1Y || crazoX === player2X && crazoY === player2Y){
+      alert("You died!");
+    }
+  } else if(random === 4 && crazoY >= 0){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareY-=5;
-    ctx.fillRect(squareX, squareY, 5, 5);
+    crazoY-= 5;
+    ctx.fillRect(crazoX, crazoY, 15, 15);
   }
 }, 10);
 }, 3000);
