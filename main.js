@@ -20,22 +20,22 @@ setInterval(function(){
   if(random === 1){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareX++;
+    squareX+=5;
     ctx.fillRect(squareX, squareY, 5, 5);
   } else if(random === 2){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareY++;
+    squareY+=5;
     ctx.fillRect(squareX, squareY, 5, 5);
   } else if(random === 3){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
       ctx.fillStyle = hue;
-    squareX--;
+    squareX-=5;
     ctx.fillRect(squareX, squareY, 5, 5);
   } else if(random === 4){
     hue = 'rgb(' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ',' + (Math.floor(Math.random() * 255)) + ')';
   ctx.fillStyle = hue;
-    squareY--;
+    squareY-=5;
     ctx.fillRect(squareX, squareY, 5, 5);
   }
 }, 10);
