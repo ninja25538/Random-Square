@@ -4,8 +4,9 @@ var ctx = c.getContext("2d");
      ctx.canvas.height = window.innerHeight - 150;
 var squareX = ctx.canvas.width/2;
 var squareY = ctx.canvas.height/2;
-var width = 1;
-var height = 1;
+var size = prompt("Pixel Size Of Squares?");
+var width = size;
+var height = size;
 
 var epilepsyWarning = document.getElementById("Epilepsy");
 epilepsyWarning.innerHTML = "Warning: Flashing Colors in 3 seconds";
